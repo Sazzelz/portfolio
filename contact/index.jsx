@@ -7,7 +7,7 @@ import { Cta40 } from "./components/Cta40";
 import { Testimonial5 } from "./components/Testimonial5";
 import { Footer12 } from "./components/Footer12";
 
-export default function Page() {
+export default function Contact() {
   return (
     <div>
       <Navbar7 />

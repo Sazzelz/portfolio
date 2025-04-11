@@ -9,7 +9,7 @@ import { Product5 } from "./components/Product5";
 import { Contact5 } from "./components/Contact5";
 import { Footer12 } from "./components/Footer12";
 
-export default function Page() {
+export default function About() {
   return (
     <div>
       <Navbar7 />

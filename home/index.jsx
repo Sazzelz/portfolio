@@ -6,7 +6,7 @@ import { Layout24 } from "./components/Layout24";
 import { Testimonial1 } from "./components/Testimonial1";
 import { Footer12 } from "./components/Footer12";
 
-export default function Page() {
+export default function Home() {
   return (
     <div>
       <Navbar7 />

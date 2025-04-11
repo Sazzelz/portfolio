@@ -18,7 +18,7 @@ import { Cta7 } from "./components/Cta7";
 import { Cta8 } from "./components/Cta8";
 import { Footer12 } from "./components/Footer12";
 
-export default function Page() {
+export default function Project() {
   return (
     <div>
       <Navbar7 />
