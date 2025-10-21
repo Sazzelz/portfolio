@@ -8,11 +8,15 @@ type AboutSectionProps = {
 export default function AboutSection({ content, label }: AboutSectionProps) {
   return (
     <section id="about" className="scroll-mt-24 space-y-6">
-      <p className="text-sm uppercase tracking-[0.35em] text-amber-700">{label}</p>
+      <p className="text-sm uppercase tracking-[0.35em] text-amber-700">
+        {label}
+      </p>
       <h2 className="text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">
         {content.title}
       </h2>
-      <p className="max-w-3xl text-lg text-neutral-700 sm:text-xl">{content.body}</p>
+      <p className="max-w-3xl text-lg text-neutral-700 sm:text-xl">
+        {content.body}
+      </p>
       <div className="flex flex-wrap gap-3">
         {content.focus.map((focus) => (
           <span
