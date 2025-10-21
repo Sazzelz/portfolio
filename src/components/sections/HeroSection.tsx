@@ -1,5 +1,9 @@
 import Image from "next/image";
-import { languageOptions, type Language, type PortfolioContent } from "@/lib/translations";
+import {
+  languageOptions,
+  type Language,
+  type PortfolioContent,
+} from "@/lib/translations";
 
 type HeroSectionProps = {
   content: PortfolioContent;
@@ -7,7 +11,11 @@ type HeroSectionProps = {
   onLanguageChange: (language: Language) => void;
 };
 
-export default function HeroSection({ content, language, onLanguageChange }: HeroSectionProps) {
+export default function HeroSection({
+  content,
+  language,
+  onLanguageChange,
+}: HeroSectionProps) {
   return (
     <section className="grid gap-10 lg:grid-cols-[3fr_2fr] lg:items-start">
       <div className="space-y-6">
@@ -32,14 +40,18 @@ export default function HeroSection({ content, language, onLanguageChange }: Her
             <h1 className="text-4xl font-semibold tracking-tight text-neutral-900 sm:text-5xl">
               {content.hero.name}
             </h1>
-            <p className="text-lg text-neutral-600 sm:text-xl">{content.hero.roles}</p>
+            <p className="text-lg text-neutral-600 sm:text-xl">
+              {content.hero.roles}
+            </p>
           </div>
         </div>
-        <p className="max-w-xl text-lg text-neutral-700 sm:text-xl">{content.hero.description}</p>
+        <p className="max-w-xl text-lg text-neutral-700 sm:text-xl">
+          {content.hero.description}
+        </p>
         <div className="flex flex-wrap gap-4">
           <a
             href="#contact"
-            className="inline-flex items-center justify-center rounded-full bg-neutral-900 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-lg shadow-neutral-900/10 transition hover:-translate-y-0.5 hover:shadow-neutral-900/20"
+            className="inline-flex items-center justify-center rounded-full bg-red-900/60 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-lg shadow-neutral-900/10 transition hover:-translate-y-0.5 hover:shadow-neutral-900/20"
           >
             {content.hero.primaryCta}
           </a>
@@ -87,7 +99,9 @@ export default function HeroSection({ content, language, onLanguageChange }: Her
               <p className="text-sm uppercase tracking-[0.25em] text-amber-700">
                 {highlight.label}
               </p>
-              <p className="mt-2 text-base text-neutral-700">{highlight.detail}</p>
+              <p className="mt-2 text-base text-neutral-700">
+                {highlight.detail}
+              </p>
             </li>
           ))}
         </ul>

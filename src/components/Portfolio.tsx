@@ -17,27 +17,40 @@ export default function Portfolio() {
   const content = useMemo(() => translations[language], [language]);
   const navItems = useMemo(
     () => navOrder.map((id) => ({ id, label: content.nav[id] })),
-    [content.nav],
+    [content.nav]
   );
 
-  const handleLanguageChange = useCallback(
-    (code: Language) => {
-      setLanguage(code);
-    },
-    [],
-  );
+  const handleLanguageChange = useCallback((code: Language) => {
+    setLanguage(code);
+  }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-amber-50 via-white to-rose-50 text-neutral-900">
+    <div className="min-h-screen bg-linear-to-b from-red-900/10 via-white to-rose-50 text-neutral-900">
       <div className="mx-auto flex min-h-screen w-full max-w-5xl flex-col px-6 pb-16 pt-10 sm:px-10 lg:px-20">
-        <HeroSection content={content} language={language} onLanguageChange={handleLanguageChange} />
+        <HeroSection
+          content={content}
+          language={language}
+          onLanguageChange={handleLanguageChange}
+        />
 
         <main className="mt-16 flex flex-1 flex-col gap-24">
           <NavigationBar items={navItems} />
-          <AboutSection content={content.sections.about} label={content.nav.about} />
-          <ProjectsSection content={content.sections.projects} label={content.nav.projects} />
-          <CultureSection content={content.sections.culture} label={content.nav.culture} />
-          <ContactSection content={content.sections.contact} label={content.nav.contact} />
+          <AboutSection
+            content={content.sections.about}
+            label={content.nav.about}
+          />
+          <ProjectsSection
+            content={content.sections.projects}
+            label={content.nav.projects}
+          />
+          <CultureSection
+            content={content.sections.culture}
+            label={content.nav.culture}
+          />
+          <ContactSection
+            content={content.sections.contact}
+            label={content.nav.contact}
+          />
         </main>
 
         <footer className="mt-24 border-t border-neutral-200 pt-8 text-xs uppercase tracking-[0.3em] text-neutral-500">
