@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Anjali Raman · Tamil Designerin & Creative Technologist",
+  title: "Sasmitha Sinnathurai - UX/UI Designer",
   description:
-    "Schlichte, elegante Portfolio-Seite von Anjali Raman, tamilische Produktdesignerin und Creative Technologist in Berlin.",
+    "Schlichte, elegante Portfolio-Seite von Sasmitha Sinnathurai, UX/UI Designerin.",
 };
 
 export default function RootLayout({
