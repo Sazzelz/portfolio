@@ -1,1 +1,6 @@
-export { default } from "./(portfolio)/page";
+// app/page.tsx
+import PortfolioPage from "./(portfolio)/page";
+
+export default function Page() {
+  return <PortfolioPage />;
+}
