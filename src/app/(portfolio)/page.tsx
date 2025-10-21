@@ -1,12 +1,12 @@
 "use client";
 
 import { useCallback, useMemo, useState } from "react";
-import HeroSection from "./sections/hero/page";
-import Navigation from "./sections/navigation/page";
-import AboutSection from "./sections/about/page";
-import ProjectsSection from "./sections/projects/page";
-import CultureSection from "./sections/culture/page";
-import ContactSection from "./sections/contact/page";
+import HeroSection from "./sections/hero/HeroSection";
+import Navigation from "./sections/navigation/Navigation";
+import AboutSection from "./sections/about/AboutSection";
+import ProjectsSection from "./sections/projects/ProjectsSection";
+import CultureSection from "./sections/culture/CultureSection";
+import ContactSection from "./sections/contact/ContactSection";
 import { translations, type Language } from "./_config/translations";
 
 const navKeys = ["about", "projects", "culture", "contact"] as const;
@@ -25,7 +25,7 @@ export default function PortfolioPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-linear-to-b from-red-900/9 via-white to-rose-50 text-neutral-900">
+    <div className="min-h-screen bg-linear-to-b from-red-900/10 via-white to-rose-50 text-neutral-900">
       <div className="mx-auto flex min-h-screen w-full max-w-5xl flex-col px-6 pb-16 pt-10 sm:px-10 lg:px-20">
         <HeroSection
           content={content}

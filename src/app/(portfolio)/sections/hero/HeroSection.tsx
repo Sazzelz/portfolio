@@ -1,9 +1,5 @@
 import Image from "next/image";
-import {
-  languageOptions,
-  type Language,
-  type PortfolioContent,
-} from "../../_config/translations";
+import { languageOptions, type Language, type PortfolioContent } from "../../_config/translations";
 
 type HeroSectionProps = {
   content: PortfolioContent;
@@ -29,6 +25,9 @@ export default function HeroSection({
               className="object-cover"
               priority
             />
+            <span className="absolute -left-6 top-1/2 hidden -translate-y-1/2 -rotate-90 text-[10px] uppercase tracking-[0.45em] text-amber-700 sm:block">
+              Tamil design
+            </span>
           </div>
           <div>
             <p className="text-sm uppercase tracking-[0.35em] text-amber-700">
@@ -37,18 +36,14 @@ export default function HeroSection({
             <h1 className="text-4xl font-semibold tracking-tight text-neutral-900 sm:text-5xl">
               {content.hero.name}
             </h1>
-            <p className="text-lg text-neutral-600 sm:text-xl">
-              {content.hero.roles}
-            </p>
+            <p className="text-lg text-neutral-600 sm:text-xl">{content.hero.roles}</p>
           </div>
         </div>
-        <p className="max-w-xl text-lg text-neutral-700 sm:text-xl">
-          {content.hero.description}
-        </p>
+        <p className="max-w-xl text-lg text-neutral-700 sm:text-xl">{content.hero.description}</p>
         <div className="flex flex-wrap gap-4">
           <a
             href="#contact"
-            className="inline-flex items-center justify-center rounded-full bg-rose-700/30 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-lg shadow-neutral-900/10 transition hover:-translate-y-0.5 hover:shadow-neutral-900/20"
+            className="inline-flex items-center justify-center rounded-full bg-neutral-900 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-lg shadow-neutral-900/10 transition hover:-translate-y-0.5 hover:shadow-neutral-900/20"
           >
             {content.hero.primaryCta}
           </a>
@@ -96,9 +91,7 @@ export default function HeroSection({
               <p className="text-sm uppercase tracking-[0.25em] text-amber-700">
                 {highlight.label}
               </p>
-              <p className="mt-2 text-base text-neutral-700">
-                {highlight.detail}
-              </p>
+              <p className="mt-2 text-base text-neutral-700">{highlight.detail}</p>
             </li>
           ))}
         </ul>
