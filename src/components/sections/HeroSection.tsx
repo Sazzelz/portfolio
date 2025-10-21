@@ -1,17 +1,13 @@
 import Image from "next/image";
-import { languageOptions, type Language, type PortfolioContent } from "../../_config/translations";
+import { languageOptions, type Language, type PortfolioContent } from "@/lib/translations";
 
 type HeroSectionProps = {
   content: PortfolioContent;
   language: Language;
-  onLanguageChange: (code: Language) => void;
+  onLanguageChange: (language: Language) => void;
 };
 
-export default function HeroSection({
-  content,
-  language,
-  onLanguageChange,
-}: HeroSectionProps) {
+export default function HeroSection({ content, language, onLanguageChange }: HeroSectionProps) {
   return (
     <section className="grid gap-10 lg:grid-cols-[3fr_2fr] lg:items-start">
       <div className="space-y-6">

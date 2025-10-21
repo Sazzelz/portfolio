@@ -1,4 +1,4 @@
-import type { PortfolioContent } from "../../_config/translations";
+import type { PortfolioContent } from "@/lib/translations";
 
 type CultureSectionProps = {
   content: PortfolioContent["sections"]["culture"];

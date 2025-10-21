@@ -1,4 +1,4 @@
-import type { PortfolioContent } from "../../_config/translations";
+import type { PortfolioContent } from "@/lib/translations";
 
 type ProjectsSectionProps = {
   content: PortfolioContent["sections"]["projects"];
@@ -26,10 +26,20 @@ export default function ProjectsSection({ content, label }: ProjectsSectionProps
               <h3 className="text-xl font-semibold text-neutral-900">{project.title}</h3>
               <p className="text-sm text-neutral-600">{project.description}</p>
             </div>
-            <div className="mt-6">
+            <div className="mt-6 flex items-center justify-between">
               <span className="inline-flex items-center rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-amber-800">
                 Tamil-led
               </span>
+              {project.link ? (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-600 transition hover:text-neutral-900"
+                >
+                  Case Study →
+                </a>
+              ) : null}
             </div>
           </article>
         ))}

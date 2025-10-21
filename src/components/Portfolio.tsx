@@ -1,22 +1,22 @@
 "use client";
 
 import { useCallback, useMemo, useState } from "react";
-import HeroSection from "./sections/hero/HeroSection";
-import Navigation from "./sections/navigation/Navigation";
-import AboutSection from "./sections/about/AboutSection";
-import ProjectsSection from "./sections/projects/ProjectsSection";
-import CultureSection from "./sections/culture/CultureSection";
-import ContactSection from "./sections/contact/ContactSection";
-import { translations, type Language } from "./_config/translations";
+import HeroSection from "./sections/HeroSection";
+import NavigationBar from "./sections/NavigationBar";
+import AboutSection from "./sections/AboutSection";
+import ProjectsSection from "./sections/ProjectsSection";
+import CultureSection from "./sections/CultureSection";
+import ContactSection from "./sections/ContactSection";
+import { translations, type Language } from "@/lib/translations";
 
-const navKeys = ["about", "projects", "culture", "contact"] as const;
+const navOrder = ["about", "projects", "culture", "contact"] as const;
 
-export default function PortfolioClient() {
+export default function Portfolio() {
   const [language, setLanguage] = useState<Language>("de");
 
   const content = useMemo(() => translations[language], [language]);
   const navItems = useMemo(
-    () => navKeys.map((id) => ({ id, label: content.nav[id] })),
+    () => navOrder.map((id) => ({ id, label: content.nav[id] })),
     [content.nav],
   );
 
@@ -30,14 +30,10 @@ export default function PortfolioClient() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-amber-50 via-white to-rose-50 text-neutral-900">
       <div className="mx-auto flex min-h-screen w-full max-w-5xl flex-col px-6 pb-16 pt-10 sm:px-10 lg:px-20">
-        <HeroSection
-          content={content}
-          language={language}
-          onLanguageChange={handleLanguageChange}
-        />
+        <HeroSection content={content} language={language} onLanguageChange={handleLanguageChange} />
 
         <main className="mt-16 flex flex-1 flex-col gap-24">
-          <Navigation items={navItems} />
+          <NavigationBar items={navItems} />
           <AboutSection content={content.sections.about} label={content.nav.about} />
           <ProjectsSection content={content.sections.projects} label={content.nav.projects} />
           <CultureSection content={content.sections.culture} label={content.nav.culture} />
