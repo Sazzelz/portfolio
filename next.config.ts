@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const nextConfig = {
+  output: "export", // nur das! (für statisches Deploy)
+  images: { unoptimized: true }, // falls next/image verwendet wird
+  trailingSlash: true, // oft nötig für GH Pages
+  // kein custom distDir, keine experimentals zum Testen
 };
 
 export default nextConfig;
