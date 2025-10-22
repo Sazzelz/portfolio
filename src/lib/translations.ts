@@ -47,6 +47,15 @@ export const translations = {
             link: "https://sasmitha.notion.site/Group-Travel-Planning-Web-App-Developing-an-App-b9097d48953b43c382e33ca8384b729d?source=copy_link",
           },
         ],
+        items: [
+          {
+            title: "Gotrip",
+            description:
+              "Web-App zur effizienten Abstimmung von Gruppenreisen mit Funktionen für Budgetverwaltung, Terminplanung und gemeinsame Aktivitäten.",
+            meta: "Group Traveling",
+            link: "https://sasmitha.notion.site/Group-Travel-Planning-Web-App-Developing-an-App-b9097d48953b43c382e33ca8384b729d?source=copy_link",
+          },
+        ],
       },
       culture: {
         title: "Design, das Wurzeln sichtbar macht",
