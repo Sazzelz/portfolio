@@ -46,10 +46,8 @@ export const translations = {
             meta: "Group Traveling",
             link: "https://sasmitha.notion.site/Group-Travel-Planning-Web-App-Developing-an-App-b9097d48953b43c382e33ca8384b729d?source=copy_link",
           },
-        ],
-        items: [
           {
-            title: "Gotrip",
+            title: "Gotrip_2",
             description:
               "Web-App zur effizienten Abstimmung von Gruppenreisen mit Funktionen für Budgetverwaltung, Terminplanung und gemeinsame Aktivitäten.",
             meta: "Group Traveling",
@@ -131,9 +129,9 @@ export const translations = {
             meta: "Group Traveling",
             link: "https://sasmitha.notion.site/Group-Travel-Planning-Web-App-Developing-an-App-b9097d48953b43c382e33ca8384b729d?source=copy_link",
           },
-        ],
-        { 
-        title: "Redesign of the student registration flow - UI Work",
+
+          {
+            title: "Redesign of the student registration flow - UI Work",
             description:
               "Der Ablauf der Studentenregistrierung wurde neu gestaltet, um die Geschwindigkeit, Übersichtlichkeit und allgemeine Benutzerfreundlichkeit zu verbessern.",
             meta: "Group Traveling",
