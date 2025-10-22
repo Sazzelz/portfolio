@@ -132,6 +132,14 @@ export const translations = {
             link: "https://sasmitha.notion.site/Group-Travel-Planning-Web-App-Developing-an-App-b9097d48953b43c382e33ca8384b729d?source=copy_link",
           },
         ],
+        { 
+        title: "Redesign of the student registration flow - UI Work",
+            description:
+              "Der Ablauf der Studentenregistrierung wurde neu gestaltet, um die Geschwindigkeit, Übersichtlichkeit und allgemeine Benutzerfreundlichkeit zu verbessern.",
+            meta: "Group Traveling",
+            link: "https://sasmitha.notion.site/Group-Travel-Planning-Web-App-Developing-an-App-b9097d48953b43c382e33ca8384b729d?source=copy_link",
+          },
+        ],
       },
       culture: {
         title: "Design that honours roots",
